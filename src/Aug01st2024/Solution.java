@@ -25,6 +25,24 @@ public class Solution {
     }
 
     // Return the number of passengers who are strictly more than 60 years old.
+
+    //Complexity: O(n) but faster
+    public static int countSeniors(String[] details) {
+        int count = 0;
+        for (String person : details) {
+            int age = (person.charAt(11) - 48)*10 + person.charAt(12) - 48;
+            //int age = (person.charAt(11) - '0')*10 + person.charAt(12) - '0';
+            //Because: '0' in ascii table is: 48
+            //'1' is 49, '2' is 50
+            // So if we subtract by zero, we have the actual Integer value
+            if (age > 60)
+                count++;
+        }
+        return count;
+    }
+
+    /*
+    //Complexity: O(n)
     public static int countSeniors(String[] details) {
         int count = 0;
         for (String person : details) {
@@ -35,4 +53,5 @@ public class Solution {
         }
         return count;
     }
+    */
 }
