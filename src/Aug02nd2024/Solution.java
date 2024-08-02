@@ -1,7 +1,6 @@
 package Aug02nd2024;
 
-import java.util.Arrays;
-
+// Problem 2134. Minimum Swaps to Group All 1's Together II
 public class Solution {
     public static void main(String[] args) {
         int[] nums = new int[] {1,1,0,0,1};
